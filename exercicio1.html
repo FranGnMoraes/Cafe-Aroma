@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .caixa-a {
+            box-sizing: content-box;
+            width: 200px;
+            padding: 20px;
+            border: 25px solid navy;
+        }
+        /* largura final: 250px */
+
+        .caixa-b {
+            box-sizing: border-box;
+            width: 200px;
+            padding: 20px;
+            border: 5px solid navy;
+        }
+        /* largura final: 200px */
+    </style>
+</head>
+<body>
+
+    <div class="caixa-a">
+        <p>Utilizando box-sizing: content-box</p>
+    </div>
+    <br>
+    <div class="caixa-b">
+        <p>Utilizando box-sizing: border-box</p>
+    </div>
+
+</body>
+</html>
