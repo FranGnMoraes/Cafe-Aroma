@@ -1,0 +1,216 @@
+/* 
+Parte A — Base 
+1. Crie o estilo.css ligado por <link>. Nada de style inline ou <style> interno. 
+2. Declare um bloco :root com no mínimo 5 variáveis: cor primária (tom de café/marrom ou verde, à 
+sua escolha), cor de destaque, cor de fundo, espaçamento padrão e fonte de título. 
+3. Adicione um reset simples (* { box-sizing: border-box; margin: 0; padding: 0; }) logo após o :root. 
+
+Parte B — Aplicação 
+4. Defina cores de fundo e espaçamento do header/nav, main e footer com as variáveis do :root. 
+5. Estilize os links de navegação (nav a) e adicione um estado :hover visível. 
+6. Crie uma classe reutilizável (ex.: .cardapio-item) para as linhas ou células da tabela de cardápio, 
+deixando preços alinhados à direita. 
+7. Escolha uma tipografia de título e outra de corpo, com fallback genérico, e ajuste line-height para 
+boa legibilidade. 
+8. Estilize inputs, labels e o botão de envio no formulário de reserva, garantindo contraste adequado 
+entre texto e fundo.
+*/
+
+:root {
+    --cor-primaria: #482715;
+    --cor-secundaria: #fdf2d8;
+    --cor-destaque: #003603;
+
+    --spacing-root: clamp(1rem, 5vw, 3rem);
+    --title-font: "Nunito", sans-serif;
+    --secondary-font: "Comfortaa", sans-serif;
+    --border-radius: 10px;
+    --box-shadow: 0 8px 25px rgba(0, 0, 0, .12);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            rgba(28, 19, 13, 0.80),
+            rgba(28, 19, 13, 0.80)
+        ),
+        url("img/fundo.png");
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    font-family: var(--secondary-font);
+    color: var(--cor-primaria);
+}
+
+h1 {
+    font-family: var(--title-font);
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--cor-secundaria);
+    text-shadow: 2px 2px 2px rgb(0 54 3);
+}
+
+h2 {
+    font-family: var(--title-font);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--cor-primaria);
+    line-height: 2.6;
+}
+
+p {
+    font-family: var(--secondary-font);
+}
+
+.hr1 {
+    border: none;
+    height: 100px; 
+    width: 100%; 
+    background-image: url('img/hr1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.hr2 {
+    border: none;
+    height: 90px; 
+    width: 100%; 
+    background-image: url('img/hr2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+header {
+    background-color: var(--cor-primaria);
+    padding: 2vh 5vw;
+    display: block;
+    
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-shadow: var(--box-shadow);
+
+    nav {
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+            color: white;
+            font-family: var(--secondary-font);
+        }
+    }
+
+    a {
+        
+        color: var(--cor-secundaria);
+        text-shadow: 2px 2px 2px rgb(0 54 3);
+
+    }
+
+    .logotipo {
+        width: 40vw;
+        height: auto;
+        max-width: 50px;
+        max-height: 50px;
+    }
+
+    nav {
+        a {
+            text-decoration: none;
+            color: var(--cor-secundaria);
+            &:hover {
+                color: var(--cor-destaque);
+                text-shadow: 1px 1px 1px rgb(249, 249, 249);
+            }
+        }
+    }
+}
+
+main {
+
+    box-sizing: border-box;
+    padding: var(--spacing-root);
+    text-align: left;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    min-height: 100vh;
+
+    line-height: 1.6;
+
+    section {
+        margin: var(--spacing-root);
+    }
+
+    #sobre {
+
+        background-color: var(--cor-destaque);
+        color: var(--cor-secundaria);
+        margin: auto;
+        
+        
+        border-radius: 10px;
+
+        h2 {
+            color: var(--cor-secundaria);
+            text-shadow: 6px 6px 6px rgb(72, 39, 21);
+            padding: 0.5rem 5vw 0.5rem 5vw;
+            margin: 40px;
+            text-align: center;
+            font-size: 1.6rem;
+            line-height: 1.5;
+        }
+
+        p {
+            color: white;
+            line-height: 2;
+            margin: 40px;
+            font-size: 1.2rem;
+            line-height: 2;
+            padding: 0.5rem 5vw 0.5rem 5vw;
+        }
+
+        img {
+            width: 76%;
+            height: auto;
+            border-radius: var(--border-radius);
+            margin: auto;
+            display: block;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+}
+
+footer {
+    background-color: var(--cor-primaria);
+    padding: var(--spacing-root);
+    display: block;
+    text-align: center;
+    
+    p {
+        color: var(--cor-secundaria);    
+    }
+}
