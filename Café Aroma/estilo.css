@@ -122,7 +122,7 @@ header {
     }
 
     a {
-        
+        text-decoration: none;
         color: var(--cor-secundaria);
         text-shadow: 2px 2px 2px rgb(0 54 3);
 
@@ -201,6 +201,45 @@ main {
             justify-content: center;
         }
     }
+
+    #cardapio {
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+
+        thead {
+            background-color: var(--cor-primaria);
+            color: var(--cor-secundaria);
+            background-color: var(--cor-primaria);
+        }
+
+        th {
+            padding: 10px;
+            text-align: left;
+            background-color: var(--cor-primaria);
+        }
+
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        td:nth-child(even) {
+            background-color: var(--cor-destaque);
+            color: var(--cor-secundaria);
+        }
+
+        td:nth-child(even) {
+            background-color: var(--cor-primaria);
+            color: var(--cor-secundaria);
+        }
+    }
+
+    /* quero que fique intercalando as cores, como posso fazer? */
 
 }
 
