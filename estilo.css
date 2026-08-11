@@ -130,36 +130,6 @@ header {
     }
 }
 
-@supports (animation-timeline: scroll()) {
-    header {
-        nav {
-            animation: esconder-nav linear both;
-            animation-timeline: scroll(root block);
-            animation-range: 0 180px;
-            overflow: hidden;
-            transform-origin: top;
-        }
-    }
-
-    @keyframes esconder-nav {
-        from {
-            opacity: 1;
-            transform: translateY(0);
-            max-height: 120px;
-            margin-top: 0;
-            margin-bottom: 0;
-            pointer-events: auto;
-        }
-        to {
-            opacity: 0;
-            transform: translateY(-12px);
-            max-height: 0;
-            margin-top: -6px;
-            margin-bottom: -6px;
-            pointer-events: none;
-        }
-    }
-}
 
 main {
     padding: var(--spacing-root);
@@ -425,5 +395,37 @@ footer {
             }
 
         }
+
+    }
+    @supports (animation-timeline: scroll()) {
+    header {
+        nav {
+            animation: esconder-nav linear both;
+            animation-timeline: scroll(root block);
+            animation-range: 0 180px;
+            overflow: hidden;
+            transform-origin: top;
+        }
+    }
+
+    @keyframes esconder-nav {
+        from {
+            opacity: 1;
+            transform: translateY(0);
+            max-height: 120px;
+            margin-top: 0;
+            margin-bottom: 0;
+            pointer-events: auto;
+        }
+        to {
+            opacity: 0;
+            transform: translateY(-12px);
+            max-height: 0;
+            margin-top: -6px;
+            margin-bottom: -6px;
+            pointer-events: none;
+        }
+    }
+}
     }
 }
