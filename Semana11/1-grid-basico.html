@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        :root {
+            --bg: rgb(0, 0, 70);
+            --panel: rgb(0, 0, 129);
+            --code: rgb(0, 0, 31);
+            --cyan: rgb(31, 148, 163);
+            --teal: rgb(152, 240, 255);
+            --yellow: rgb(255, 255, 0);
+            --white: rgb(255, 255, 255);
+            --grey: rgb(204, 204, 204);
+            --rose: #ff67ff;
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                background: var(--bg);
+                color: var(--white);
+                font-family: Calibri, "Segoe UI", sans-serif;
+                padding: 32px 40px 60px;
+            }
+
+            h1 {
+                font-family: Cambria, Georgia, serif;
+                font-size: 28px;
+                margin: 0 0 6px;
+            }
+
+            .sub {
+                color: var(--grey);
+                font-size: 15px;
+                margin-bottom: 28px;
+                max-width: 760px;
+            }
+
+            .codebox {
+    
+                background: var(--code);
+                border-radius: 10px;
+                font-family: "Courier New", monospace;
+                font-size: 14px;
+                line-height: 1.7;
+                white-space: pre;
+                overflow-x: auto;
+                margin-bottom: 28px;
+                max-width: 520px;
+            }
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 16px;
+            max-width: 760px;
+        }
+
+        .grid > div {
+            background: var(--panel);
+            padding: 24px;
+            text-align: center;
+            border-radius: 10px;
+            font-weight: bold;
+            color: var(--cyan);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Grid Básico</h1>
+
+    <p class="sub">Este é um exemplo de grid básico em CSS.</p>
+
+
+    <div class="codebox">
+        
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 16px;
+            max-width: 760px;
+        }
+
+    </div>
+
+
+    <div class="grid">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+        <div>Item 4</div>
+        <div>Item 5</div>
+        <div>Item 6</div>
+    </div>
+
+</body>
+
+</html>
