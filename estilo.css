@@ -183,6 +183,9 @@ main {
             repeat(auto-fit,
                 minmax(250px, 1fr));
         gap: 24px;
+
+        align-items: center;
+        justify-content: center;
         
 
         .produto {
@@ -192,6 +195,9 @@ main {
             text-align: center;
             box-shadow: var(--box-shadow);
 
+            overflow: hidden;
+            position: relative;
+
             img {
                 width: 240px;
                 height: 180px;
@@ -199,11 +205,17 @@ main {
             }
 
             .hr2 {
-                margin: none;
-                padding-bottom: 20px;
+                width: 240px;
+                margin: 20px auto 30px;
                 height: 10px;
                 border: none;
+                max-width: 100%;
+                background-size: 380% auto;
+                background-position: center;
+                border-radius: var(--border-radius);   
             }
+
+            
 
             h3 {
                 font-size: 1.2rem;
@@ -216,6 +228,7 @@ main {
                 font-size: 1rem;
                 line-height: 1.2;
                 margin: 10px 0;
+                padding-bottom: 10px;
             }
 
             .preco {
