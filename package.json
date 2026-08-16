@@ -4,9 +4,9 @@
   "description": "![Bolsa Futuro Digital](https://img.shields.io/badge/Curso-Bolsa%20Futuro%20Digital-482715?style=for-the-badge) ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) ![SASS](https://img.shields.io/badge/SASS-CC6699?style=for-the-badge&logo=sass&logoColor=white) ![Status](https://img.shields.io/badge/Status-Conclu%C3%ADdo-003603?style=for-the-badge)",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch --no-source-map scss/style.scss estilo.css",
-    "build": "sass --no-source-map scss/style.scss estilo.css",
-    "watch": "sass --watch --no-source-map scss/style.scss estilo.css"
+    "sass": "sass --watch --no-source-map scss/style.scss css/style.css",
+    "build": "sass --no-source-map scss/style.scss css/style.css",
+    "watch": "sass --watch --no-source-map scss/style.scss css/style.css"
   },
   "repository": {
     "type": "git",
