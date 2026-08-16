@@ -457,7 +457,7 @@ footer {
   gap: 20px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1030px) {
   #sobre .sobre-conteudo {
     flex-direction: column;
     gap: var(--space-6);

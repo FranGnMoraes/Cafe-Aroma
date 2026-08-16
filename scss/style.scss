@@ -507,8 +507,8 @@ footer {
   gap: 20px;
 }
 
-@media (max-width: 1000px) {
-  // abaixo de 1000px o texto não cabe mais ao lado da imagem sem espremer,
+@media (max-width: 1030px) {
+  // abaixo de 1030px o texto não cabe mais ao lado da imagem sem espremer,
   // então o texto passa a ficar embaixo da imagem
   #sobre {
     .sobre-conteudo {
