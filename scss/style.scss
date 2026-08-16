@@ -326,9 +326,8 @@ main {
     position: relative;
     display: flex;
     align-items: center;
-    width: min(100%, 1200px);
+    width: min(100%, 1180px); // mesma largura de #cardapio, para os cards ficarem alinhados
     margin: 0 auto;
-    padding: 0 2.2rem;
     overflow: visible;
   }
 
@@ -399,20 +398,20 @@ main {
   }
 
   .seta.prev {
-    left: 0.5rem;
-    transform: translate(-8%, -50%);
+    left: -2.75rem; // sobressai para fora dos cards do cardápio, sem sobrepor
+    transform: translateY(-50%);
 
     &:hover {
-      transform: translate(-8%, -50%) scale(1.04);
+      transform: translateY(-50%) scale(1.08);
     }
   }
 
   .seta.next {
-    right: 0.5rem;
-    transform: translate(8%, -50%);
+    right: -2.75rem;
+    transform: translateY(-50%);
 
     &:hover {
-      transform: translate(8%, -50%) scale(1.04);
+      transform: translateY(-50%) scale(1.08);
     }
   }
 
@@ -539,6 +538,23 @@ footer {
 
     p {
       text-align: center;
+    }
+  }
+
+  #depoimentos {
+    .carrossel-wrapper {
+      // sem espaço sobrando para as setas ficarem para fora dos cards,
+      // então reservamos uma faixa interna (padding) só para elas
+      width: 100%;
+      padding: 0 3rem;
+    }
+
+    .seta.prev {
+      left: 0.25rem;
+    }
+
+    .seta.next {
+      right: 0.25rem;
     }
   }
 }
