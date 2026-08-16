@@ -507,20 +507,9 @@ footer {
   gap: 20px;
 }
 
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: var(--space-4);
-  }
-  main {
-    section {
-      margin-bottom: var(--space-10);
-    }
-  }
-
+@media (max-width: 1000px) {
+  // abaixo de 1000px o texto não cabe mais ao lado da imagem sem espremer,
+  // então o texto passa a ficar embaixo da imagem
   #sobre {
     .sobre-conteudo {
       flex-direction: column;
@@ -540,11 +529,24 @@ footer {
       text-align: center;
     }
   }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: var(--space-4);
+  }
+  main {
+    section {
+      margin-bottom: var(--space-10);
+    }
+  }
 
   #depoimentos {
     .carrossel-wrapper {
-      // sem espaço sobrando para as setas ficarem para fora dos cards,
-      // então reservamos uma faixa interna (padding) só para elas
       width: 100%;
       padding: 0 3rem;
     }
