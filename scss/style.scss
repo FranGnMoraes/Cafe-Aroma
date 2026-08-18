@@ -558,5 +558,12 @@ footer {
     .seta.next {
       right: 0.25rem;
     }
+
+    li {
+      // a área visível do carrossel = 100vw - padding do main - padding do
+      // wrapper (corredor das setas); sem isso o card fixo de 300px nunca
+      // cabia inteiro e ficava sempre cortado
+      width: min(300px, calc(100vw - 2 * var(--spacing-root) - 7rem));
+    }
   }
 }

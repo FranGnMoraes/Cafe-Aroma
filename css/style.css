@@ -494,4 +494,7 @@ footer {
   #depoimentos .seta.next {
     right: 0.25rem;
   }
+  #depoimentos li {
+    width: min(300px, 100vw - 2 * var(--spacing-root) - 7rem);
+  }
 }
