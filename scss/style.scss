@@ -125,8 +125,11 @@ header {
     ul {
       list-style: none;
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
-      gap: var(--space-6);
+      justify-content: center;
+      row-gap: var(--space-3);
+      column-gap: var(--space-6);
       margin: 0;
       padding: 0;
     }
@@ -539,6 +542,18 @@ footer {
     text-align: center;
     gap: var(--space-4);
   }
+
+  // em telas bem estreitas os 4 itens do menu não cabem numa linha só;
+  // aperta o espaçamento e o padding do header antes de precisar quebrar linha
+  @media (max-width: 400px) {
+    header {
+      padding: var(--space-4) var(--space-5);
+    }
+    header nav ul {
+      column-gap: var(--space-4);
+    }
+  }
+
   main {
     section {
       margin-bottom: var(--space-10);
